@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import type { Quiz } from '@/server/repositories/quizzes'
+import type { Quiz } from '@/types/quiz'
 import { quizApi, toHostGamePath } from '@/lib/api'
 
 export default function HostDashboard() {

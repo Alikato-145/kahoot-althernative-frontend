@@ -1,5 +1,5 @@
 import React from 'react'
-import type { LivePlayer } from '@/server/game/types'
+import type { LivePlayer } from '@/types/game'
 import { RankMotion } from './RankMotion'
 
 export function FinalLeaderboard({ players }: { players: LivePlayer[] }) {

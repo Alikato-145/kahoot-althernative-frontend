@@ -1,4 +1,4 @@
-import type { Quiz, QuizInput } from '@/server/repositories/quizzes'
+import type { Quiz, QuizInput } from '@/types/quiz'
 
 type SessionResponse = { sessionId: string; pin: string; hostUrl: string; playerUrl: string }
 
@@ -8,7 +8,7 @@ export function toHostGamePath(hostUrl: string): string {
 }
 
 async function request<T>(url: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(url, init)
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL ?? ''}${url}`, init)
   if (!response.ok) {
     const body = await response.json().catch(() => null) as { error?: string } | null
     throw new Error(body?.error ?? 'เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง')

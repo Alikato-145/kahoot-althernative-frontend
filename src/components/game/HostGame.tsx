@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useEffect, useMemo, useState } from 'react'
-import type { GameSnapshot, LivePlayer } from '@/server/game/types'
-import type { Question } from '@/server/repositories/quizzes'
+import type { GameSnapshot, LivePlayer } from '@/types/game'
+import type { Question } from '@/types/quiz'
 import { getGameSocket } from '@/lib/socket'
 import { GameShell } from '@/components/ui/GameShell'
 import { HostLobby } from './HostLobby'

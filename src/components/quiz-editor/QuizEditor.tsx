@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import type { Quiz, QuizInput } from '@/server/repositories/quizzes'
+import type { Quiz, QuizInput } from '@/types/quiz'
 import { quizApi } from '@/lib/api'
 import { QuestionEditor } from './QuestionEditor'
 

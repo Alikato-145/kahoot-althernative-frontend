@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import type { Question } from '@/server/repositories/quizzes'
+import type { Question } from '@/types/quiz'
 import { QuestionMedia } from '@/components/ui/QuestionMedia'
 import { TimeBar } from '@/components/ui/TimeBar'
 

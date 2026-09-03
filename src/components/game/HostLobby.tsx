@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { useQRCode } from 'next-qrcode'
-import type { LivePlayer } from '@/server/game/types'
+import type { LivePlayer } from '@/types/game'
 
 export function HostLobby({ pin, playerUrl, players, onStart }: { pin: string; playerUrl: string; players: LivePlayer[]; onStart: () => void }) {
   const { Canvas } = useQRCode()
