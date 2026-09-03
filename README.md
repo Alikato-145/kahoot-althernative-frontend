@@ -1,4 +1,15 @@
-# Camp Quiz
+# Camp Quiz Frontend
+
+This repository contains the Host and player web UI. Deploy it as a Next.js app on Vercel.
+
+Set these Vercel environment variables:
+
+```env
+NEXT_PUBLIC_API_URL=https://api.quiz.nxsmnt.me
+NEXT_PUBLIC_SOCKET_URL=https://api.quiz.nxsmnt.me
+```
+
+The backend and realtime server live in [kahoot-althernative-backend](https://github.com/Alikato-145/kahoot-althernative-backend).
 
 Camp Quiz is a Thai, Kahoot-inspired game for a projected Host screen and players joining from their phones. A Host creates a quiz with exactly four answers per question, optional question/reveal images, and an explanation. Live rooms use Socket.IO and Redis; MySQL keeps quiz content and final results.
 
