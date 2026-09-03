@@ -6,15 +6,6 @@ const nextConfig = {
     serverComponentsExternalPackages: ['ioredis', 'mysql2'],
   },
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/host',
-        permanent: true,
-      },
-    ]
-  },
 }
 
 const withMDX = createMDX({
