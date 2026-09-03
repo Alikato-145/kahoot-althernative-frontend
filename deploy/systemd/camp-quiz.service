@@ -1,0 +1,23 @@
+[Unit]
+Description=Camp Quiz Next.js and Socket.IO server
+After=network-online.target mysql.service redis-server.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=campquiz
+Group=campquiz
+WorkingDirectory=/srv/camp-quiz
+Environment=NODE_ENV=production
+EnvironmentFile=/etc/camp-quiz.env
+ExecStart=/usr/bin/npm run start
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ReadWritePaths=/srv/camp-quiz/media
+
+[Install]
+WantedBy=multi-user.target

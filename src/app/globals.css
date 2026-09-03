@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #241044;
+    color: #fff;
+    font-family: Arial, 'Noto Sans Thai', sans-serif;
+}
+
+/* Form controls do not inherit the white page text on their white surfaces. */
+input, textarea, select {
+    color: #241044;
+    background: #fff;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #6b5a85;
+    opacity: 1;
+}
+
+.game-shell {
+    box-sizing: border-box;
+    min-height: 100svh;
+    padding: clamp(1rem, 3vw, 3rem);
+    background: radial-gradient(circle at 50% 0%, #49217f 0%, #241044 55%, #16082e 100%);
+}
+.game-shell__header { width: min(100%, 72rem); margin: 0 auto 1.5rem; }
+.game-shell__content { width: min(100%, 72rem); margin: 0 auto; }
+.question-media { display: block; width: 100%; max-height: min(42vh, 28rem); object-fit: contain; border-radius: 1rem; }
+.answer-tile { display: flex; align-items: center; gap: .75rem; min-height: 4.5rem; padding: 1rem 1.25rem; border: 0; border-radius: .75rem; color: #fff; font: inherit; font-size: clamp(1rem, 2.5vw, 1.35rem); font-weight: 700; cursor: pointer; transition: transform .15s, filter .15s; }
+.answer-tile:hover:not(:disabled), .answer-tile:focus-visible:not(:disabled) { transform: translateY(-2px); filter: brightness(1.08); }
+.answer-tile:disabled { cursor: not-allowed; opacity: .55; }
+.answer-tile--red { background: #e53935; }.answer-tile--blue { background: #2374d8; }.answer-tile--yellow { background: #e4aa18; }.answer-tile--green { background: #2e9d59; }
+.answer-shape { display: inline-block; flex: 0 0 1.35rem; width: 1.35rem; height: 1.35rem; background: currentColor; }
+.answer-shape--triangle { clip-path: polygon(50% 0, 100% 100%, 0 100%); }.answer-shape--diamond { transform: rotate(45deg) scale(.72); }.answer-shape--circle { border-radius: 50%; }.answer-shape--square { border-radius: .15rem; }
+.game-timer { display: inline-flex; align-items: center; justify-content: center; min-width: 4.5rem; padding: .35rem .65rem; border-radius: 999px; background: #fff; color: #241044; font-variant-numeric: tabular-nums; font-weight: 800; }
+.time-bar { display: flex; width: min(100%, 42rem); align-items: center; gap: .75rem; margin: 0 auto; }
+.time-bar__track { height: 1rem; flex: 1; overflow: hidden; border: 3px solid rgba(255,255,255,.85); border-radius: 999px; background: rgba(0,0,0,.28); box-shadow: inset 0 1px 3px rgba(0,0,0,.3); }
+.time-bar__fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, #49d17d, #e9c73c 72%, #ef5350); transition: width .1s linear; }
+.time-bar__label { min-width: 3.75rem; color: #fff; font-size: 1.1rem; font-weight: 900; font-variant-numeric: tabular-nums; }
