@@ -2,6 +2,8 @@
 
 import React from 'react'
 import { useParams, useSearchParams } from 'next/navigation'
+
+export const dynamic = 'force-dynamic'
 import { HostGame } from '@/components/game/HostGame'
 
 /** Projected Host display. The capability stays in the launch URL and is never sent to Players. */
